@@ -291,6 +291,7 @@ jobs:
             echo "CONFIG_KSU_SUSFS_HIDE_KSU_SUSFS_SYMBOLS=y" >> ./arch/$ARCH/configs/${{ env.DEFCONFIG_NAME }}
             echo "CONFIG_KSU_SUSFS_SPOOF_CMDLINE_OR_BOOTCONFIG=y" >> ./arch/$ARCH/configs/${{ env.DEFCONFIG_NAME }}
             echo "CONFIG_KSU_SUSFS_OPEN_REDIRECT=y" >> ./arch/$ARCH/configs/${{ env.DEFCONFIG_NAME }}
+            echo "# CONFIG_KSU_SUSFS_SUS_MAP is not set" >> ./arch/$ARCH/configs/${{ env.DEFCONFIG_NAME }}
           fi
           if [[ "${{ env.LXC_ENABLE }}" == "true" ]]; then
            echo "CONFIG_VIRTUALIZATION=y" >> ./arch/$ARCH/configs/${{ env.DEFCONFIG_NAME }}
